@@ -3,4 +3,4 @@
 ## Hwo to prepare working environment
 
 1. To install dependencies `pipenv install`
-2. To run `pipen run python main.py`
+2. To run `pipenv run python main.py`
