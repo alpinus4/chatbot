@@ -1,6 +1,8 @@
-# Number recognition using neural networks
+# Chatbot
+Basic chatbot using neural networks
 
-## Hwo to prepare working environment
+## How to prepare working environment
 
-1. To install dependencies `pipenv install`
-2. To run `pipenv run python main.py`
+1. You need to have pipenv installed: `pip install pipenv`
+1. To install dependencies: `pipenv install`
+2. To run: `pipenv run python main.py`
