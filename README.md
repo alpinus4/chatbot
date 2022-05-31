@@ -5,4 +5,4 @@ Basic chatbot using neural networks
 
 1. You need to have pipenv installed: `pip install pipenv`
 1. To install dependencies: `pipenv install`
-2. To run: `pipenv run python main.py`
+2. To run: `pipenv run start`
