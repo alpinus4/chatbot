@@ -1,6 +1,5 @@
 from sentence_processor import SentenceProcessor
 
-
 class DataParser():
     def __init__(self):
         self.sp = SentenceProcessor()

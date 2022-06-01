@@ -1,6 +1,5 @@
 from torch.utils.data import Dataset
 
-
 class ChatDataset(Dataset):
 
     def __init__(self, x_data, y_data):

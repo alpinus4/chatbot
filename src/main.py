@@ -8,6 +8,5 @@ def main():
     x_train, y_train = parser.generate_training_data()
     dataset = ChatDataset(x_train, y_train)
 
-
 if __name__ == "__main__":
     main()
