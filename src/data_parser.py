@@ -1,6 +1,9 @@
 import json
 import numpy as np
+from torch.utils.data import DataLoader
+
 from sentence_processor import SentenceProcessor
+from chat_dataset import ChatDataset
 
 class DataParser():
     def __init__(self):
@@ -8,6 +11,7 @@ class DataParser():
         self.bag_of_words = []
         self.tags = []
         self.xy = [] # hold both patterns and the text
+        self.dataset = ChatDataset()
 
     def load(self, path):
         with open(path, 'r') as f:
@@ -41,4 +45,8 @@ class DataParser():
 
         x_train = np.array(x_train)
         y_train = np.array(y_train)
+
+        #hyperparameters
+        batch_size = 8
+        train_loader = DataLoader(dataset=self.dataset, batch_size=batch_size, shuffler=True, num_workers=2)
 
