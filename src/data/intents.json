@@ -3,57 +3,72 @@
     {
       "tag": "greeting",
       "patterns": [
-        "Hi",
-        "Hey",
-        "How are you",
-        "Is anyone there?",
         "Hello",
-        "Good day"
+        "Hi",
+        "Good morning",
+        "I'd like to buy something",
       ],
       "responses": [
-        "Hey :-)",
-        "Hello, thanks for visiting",
-        "Hi there, what can I do for you?",
-        "Hi there, how can I help?"
+        "Good morning :)",
+        "Hi, what a nice day for shopping, right?",
+        "Hey, nice to see you <3",
+        "Hello, what are you looking for?"
       ]
     },
     {
       "tag": "goodbye",
-      "patterns": ["Bye", "See you later", "Goodbye"],
+      "patterns": [
+          "Thank you, bye", 
+          "See you later", 
+          "Goodbye"
+        ],
       "responses": [
-        "See you later, thanks for visiting",
-        "Have a nice day",
+        "Thank you for visiting, see you next time!",
+        "Goodbye",
         "Bye! Come back again soon."
       ]
     },
     {
       "tag": "thanks",
-      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
-      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+      "patterns": [
+          "Thanks", 
+          "Thank you", 
+          "That's helpful", 
+          "Thank's a lot!"
+        ],
+      "responses": [
+          "Happy to help!", 
+          "Any time!", 
+          "My pleasure",
+          "You're welcome <3"
+        ]
     },
     {
       "tag": "items",
       "patterns": [
-        "Which items do you have?",
-        "What kinds of items are there?",
+        "What do you offer?",
+        "What i can buy in here?",
         "What do you sell?"
       ],
       "responses": [
-        "We sell coffee and tea",
-        "We have coffee and tea"
+        "We sell vegetables",
+        "You can buy veggies here :)",
+        "We offer goods of mother nature"
       ]
     },
     {
       "tag": "payments",
       "patterns": [
-        "Do you take credit cards?",
-        "Do you accept Mastercard?",
-        "Can I pay with Paypal?",
-        "Are you cash only?"
+        "How can I pay?",
+        "Can I use credit card?",
+        "Is cash option available?",
+        "Can I pay with Paypal?"
       ],
       "responses": [
         "We accept VISA, Mastercard and Paypal",
-        "We accept most major credit cards, and Paypal"
+        "We accept cards, paypal but not cash, sorry :(",
+        "We accept most major credit cards, and Paypal",
+        "You have to pay before sending an order, so no cash available"
       ]
     },
     {
@@ -64,20 +79,34 @@
         "When do I get my delivery?"
       ],
       "responses": [
-        "Delivery takes 2-4 days",
-        "Shipping takes 2-4 days"
+        "Delivery takes 1-2 days",
+        "Shipping takes 1-2 days"
       ]
     },
     {
-      "tag": "funny",
+        "tag": "return",
+        "patterns": [
+            "Can I return the item and get money back?",
+            "What if something will be spoiled, can I take my money back?",
+            "What if I change my mind?"
+        ],
+        "responses": [
+            "You can't return products, sorry",
+            "You can't get a refund, remeber about it!",
+            "No refunds, think about it before paying!"
+        ]
+    },
+    {
+      "tag": "facts",
       "patterns": [
-        "Tell me a joke!",
-        "Tell me something funny!",
-        "Do you know a joke?"
+        "Tell me a veggie fact!",
+        "Tell me something interesting!",
+        "Do you know any facts?"
       ],
       "responses": [
-        "Why did the hipster burn his mouth? He drank the coffee before it was cool.",
-        "What did the buffalo say when his son left for college? Bison."
+        "Potatos showed up in Europe in the second half of XVI century.",
+        "Veggies are actually a fruits of plants :)",
+        "Onion have layers just like Ogre :-D"
       ]
     }
   ]
