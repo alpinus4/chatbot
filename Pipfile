@@ -8,6 +8,7 @@ start = "python src/main.py"
 
 [packages]
 torch = "*"
+nltk = "*"
 
 [dev-packages]
 
