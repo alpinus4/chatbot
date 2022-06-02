@@ -5,6 +5,7 @@ name = "pypi"
 
 [scripts]
 start = "python src/main.py"
+train = "python src/train.py"
 
 [packages]
 torch = "*"
