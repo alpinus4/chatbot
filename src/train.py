@@ -1,4 +1,5 @@
 import torch
+import os
 
 from data_parser import DataParser
 from chat_dataset import ChatDataset
@@ -20,8 +21,9 @@ def main():
     # save data
     trained_data["all_words"] = parser.all_words
     trained_data["tags"] = parser.tags
-    torch.save(trained_data, c.TRAINED_DATA_FILEPATH)
-    print(f'training complete. file saved to {c.TRAINED_DATA_FILEPATH}')
+    os.mkdir(c.OUT_PATH)
+    torch.save(trained_data, os.path.join(c.OUT_PATH, c.TRAINED_DATA_FILENAME))
+    print(f'training complete. file saved to {os.path.join(c.OUT_PATH, c.TRAINED_DATA_FILENAME)}')
 
 if __name__ == "__main__":
     main()

@@ -1,4 +1,5 @@
-TRAINED_DATA_FILEPATH = "out/trained_data.pth"
+TRAINED_DATA_FILENAME = "trained_data.pth"
+OUT_PATH = "out/"
 INTENTS_DATA = ["src/data/intents.json"]
 
 LEARNING_RATE = 0.001
