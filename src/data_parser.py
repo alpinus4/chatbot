@@ -7,7 +7,7 @@ class DataParser():
     def __init__(self):
         self.sp = SentenceProcessor()
         self.tags = []
-        self.xy = [] # hold both patterns and the text
+        self.xy = [] # hold both patterns and the text, it will know pattern and coresponding tag
         self.all_words = []
 
     def load(self, path):
