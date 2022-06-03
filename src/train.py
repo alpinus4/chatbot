@@ -23,7 +23,7 @@ def main():
     trained_data["tags"] = parser.tags
     os.mkdir(c.OUT_PATH)
     torch.save(trained_data, os.path.join(c.OUT_PATH, c.TRAINED_DATA_FILENAME))
-    print(f'training complete. file saved to {os.path.join(c.OUT_PATH, c.TRAINED_DATA_FILENAME)}')
+    print(f'training complete. File saved to {os.path.join(c.OUT_PATH, c.TRAINED_DATA_FILENAME)}')
 
 if __name__ == "__main__":
     main()
