@@ -10,6 +10,7 @@ train = "python src/train.py"
 [packages]
 torch = "*"
 nltk = "*"
+numpy = "*"
 
 [dev-packages]
 
