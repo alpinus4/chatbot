@@ -4,7 +4,7 @@ verify_ssl = true
 name = "pypi"
 
 [scripts]
-start = "python src/main.py"
+chat = "python src/chat.py"
 train = "python src/train.py"
 
 [packages]

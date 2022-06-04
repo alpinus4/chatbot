@@ -1,4 +1,6 @@
 import json
+import os
+
 import torch
 import random
 from neural_net import NeuralNet
@@ -15,9 +17,6 @@ class Chat:
         self.tags = []
 
     def load_data(self):
-        with open("data/intents.json", "r") as f:
-            intents = json.load(f)
-
         FILE = "C:/Users/Ola/Desktop/IV sem/Sztuczna_inteligencja/projekt/chatbot/out/trained_data.pth"
         data = torch.load(FILE)
         input_size = data["input_size"]
@@ -34,6 +33,7 @@ class Chat:
     def get_response(self, msg):
         with open("data/intents.json", "r") as f:
             intents = json.load(f)
+        self.load_data()
 
         sentence = self.sp.tokenize(msg)
         X = self.sp.bag_of_words(sentence, self.all_words)
@@ -42,24 +42,26 @@ class Chat:
 
         output = self.model(X)
         _, predicted = torch.max(output, dim=1)
+
         tag = self.tags[predicted.item()]
+
         probs = torch.softmax(output, dim=1)
         prob = probs[0][predicted.item()]
-
         if prob.item() > 0.75:
-            for intent in intents["intents"]:
+            for intent in intents['intents']:
                 if tag == intent["tag"]:
                     print(f"{c.BOT_NAME}: {random.choice(intent['responses'])}")
-                else:
-                    print(f"{c.BOT_NAME}: I don't understand...")
+        else:
+            print(f"{c.BOT_NAME}: I do not understand...")
 
 chatting = Chat()
-chatting.load_data()
 while True:
-    sentence = input('You: ')
+    # sentence = "do you use credit cards?"
+    sentence = input("You: ")
     if sentence == "quit":
         break
-    chatting.get_response(sentence)
+    else:
+        chatting.get_response(sentence)
 
 
 
