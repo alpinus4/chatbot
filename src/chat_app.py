@@ -9,6 +9,7 @@ class ChatApplication:
         self.chat = Chat()
 
     def run(self):
+        self.chat.load_data()
         self.window.mainloop()
         
     def _setup_main_window(self):
@@ -69,5 +70,5 @@ class ChatApplication:
 
         self.text_widget.see(END)
 
-app =ChatApplication()
+app = ChatApplication()
 app.run()
