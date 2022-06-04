@@ -15,10 +15,11 @@ class Chat:
         self.sp = SentenceProcessor()
         self.all_words = []
         self.tags = []
+        with open(c.INTENTS_DATA[0], "r") as f:
+            self.intents = json.load(f)
 
     def load_data(self):
-        FILE = "C:/Users/Ola/Desktop/IV sem/Sztuczna_inteligencja/projekt/chatbot/out/trained_data.pth"
-        data = torch.load(FILE)
+        data = torch.load(os.path.join(c.OUT_PATH, c.TRAINED_DATA_FILENAME))
         input_size = data["input_size"]
         hidden_size = data["hidden_size"]
         output_size = data["output_size"]
@@ -31,10 +32,6 @@ class Chat:
         self.model.eval()
 
     def get_response(self, msg):
-        with open("data/intents.json", "r") as f:
-            intents = json.load(f)
-        self.load_data()
-
         sentence = self.sp.tokenize(msg)
         X = self.sp.bag_of_words(sentence, self.all_words)
         X = X.reshape(1, X.shape[0])
@@ -48,20 +45,23 @@ class Chat:
         probs = torch.softmax(output, dim=1)
         prob = probs[0][predicted.item()]
         if prob.item() > 0.75:
-            for intent in intents['intents']:
+            for intent in self.intents['intents']:
                 if tag == intent["tag"]:
-                    print(f"{c.BOT_NAME}: {random.choice(intent['responses'])}")
+                    return random.choice(intent['responses'])
         else:
-            print(f"{c.BOT_NAME}: I do not understand...")
-
-chatting = Chat()
-while True:
-    # sentence = "do you use credit cards?"
-    sentence = input("You: ")
-    if sentence == "quit":
-        break
-    else:
-        chatting.get_response(sentence)
+            return "I do not understand..."
 
 
+def main():
+    chatting = Chat()
+    chatting.load_data()
+    while True:
+        sentence = input("You: ")
+        if sentence == "quit":
+            break
+        else:
+            print(f"{c.BOT_NAME}: {chatting.get_response(sentence)}")
 
+
+if __name__ == "__main__":
+    main()

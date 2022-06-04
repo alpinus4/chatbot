@@ -5,6 +5,7 @@ name = "pypi"
 
 [scripts]
 chat = "python src/chat.py"
+chat_gui = "python src/chat_app.py"
 train = "python src/train.py"
 
 [packages]
