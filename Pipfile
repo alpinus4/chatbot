@@ -12,6 +12,7 @@ train = "python src/train.py"
 torch = "*"
 nltk = "*"
 numpy = "*"
+matplotlib = "*"
 
 [dev-packages]
 

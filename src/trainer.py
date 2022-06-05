@@ -14,6 +14,7 @@ class Trainer:
         self.model = NeuralNet(input_size, hidden_size, output_size).to(self.device)
         self.criterion = torch.nn.CrossEntropyLoss()
         self.optimizer = torch.optim.Adam(self.model.parameters(), lr=learning_rate)
+        self.loss = []
 
     def train(self, num_epochs = 1000):
         for epoch in range(num_epochs):
@@ -30,6 +31,7 @@ class Trainer:
 
             #if (epoch + 1) % 100 == 0:
             print(f'Epoch [{epoch + 1}/{num_epochs}], Loss: {loss.item():.4f}')
+            self.loss.append(loss.item())
         print(f'final loss: {loss.item():.4f}')
 
         return {
