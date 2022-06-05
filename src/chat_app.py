@@ -18,7 +18,7 @@ class ChatApplication:
         self.window.resizable(width=False, height=False)
         self.window.configure(width=470, height=550, bg=c.BG_COLOR)
 
-        head_label = Label(self.window, bg=c.BG_COLOR, fg=c.TEXT_COLOR, text="Welcome", font=c.FONT_BOLD, pady=10)
+        head_label = Label(self.window, bg=c.BG_GRAY, fg=c.TEXT_COLOR, text="Welcome", font=c.FONT_BOLD, pady=10)
         head_label.place(relwidth=1)
 
         # tiny divider
@@ -37,7 +37,7 @@ class ChatApplication:
         bottom_label = Label(self.window, bg=c.BG_GRAY, height=80)
         bottom_label.place(relwidth=1, rely=0.825)
 
-        self.msg_entry = Entry(bottom_label, bg="#2C3E50", fg=c.TEXT_COLOR, font=c.FONT)
+        self.msg_entry = Entry(bottom_label, bg=c.ENTRY_BG, fg=c.TEXT_COLOR, font=c.FONT)
         self.msg_entry.place(relwidth=0.74, relheight=0.06, rely=0.008, relx=0.011)
         self.msg_entry.focus()  # at the beginning focus on message that we can write message at once
         self.msg_entry.bind("<Return>", self._on_enter_pressed)

@@ -44,7 +44,7 @@ class Chat:
 
         probs = torch.softmax(output, dim=1)
         prob = probs[0][predicted.item()]
-        if prob.item() > 0.75:
+        if prob.item() > 0.55:
             for intent in self.intents['intents']:
                 if tag == intent["tag"]:
                     return random.choice(intent['responses'])

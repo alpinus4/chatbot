@@ -8,8 +8,9 @@ BATCH_SIZE = 8
 
 BOT_NAME = "Shrek"
 
-BG_GRAY = "#ABB289"
-BG_COLOR = "#17202A"
-TEXT_COLOR = "#EAECEE"
+BG_GRAY = "#b3c2ce"
+BG_COLOR = "#ffffff"
+ENTRY_BG = "#ffffff"
+TEXT_COLOR = "#000000"
 FONT = "Helvetica 14"
 FONT_BOLD = "Helvetica 13 bold"
