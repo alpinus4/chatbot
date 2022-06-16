@@ -1,6 +1,7 @@
 TRAINED_DATA_FILENAME = "trained_data.pth"
 OUT_PATH = "out/"
 INTENTS_DATA = ["src/data/intents.json"]
+TEST_DATA = ["src/data/test.json"]
 
 LEARNING_RATE = 0.001
 HIDDEN_SIZE = 8

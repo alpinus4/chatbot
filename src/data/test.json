@@ -1,0 +1,60 @@
+{
+    "test": [
+      {
+        "tag": "greeting",
+        "patterns": [
+            "Hello there",
+            "Hi chef"
+        ]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": [
+            "byeeee",
+            "see ya"
+        ]
+      },
+      {
+        "tag": "thanks",
+        "patterns": [
+            "thank you sooo much",
+            "thanks"
+        ]
+      },
+      {
+        "tag": "items",
+        "patterns": [
+            "what is offered here?",
+            "what items do you offer?"
+        ]
+      },
+      {
+        "tag": "payments",
+        "patterns": [
+            "Can I pay using cash?",
+            "Is payment using credit card available?"
+        ]
+      },
+      {
+        "tag": "delivery",
+        "patterns": [
+            "How long will I have to wait for delivery?",
+            "How long will I take to deliver my item?"
+        ]
+      },
+      {
+        "tag": "return",
+        "patterns": [
+            "What if I want to return an item?",
+            "Can I return and get money back?"
+        ]
+      },
+      {
+        "tag": "facts",
+        "patterns": [
+            "Can you tell me any facts?",
+            "Could you tell me anything interesting?"
+        ]
+      }
+    ]
+  }
